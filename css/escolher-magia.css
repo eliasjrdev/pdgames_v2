@@ -1,0 +1,417 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* Cores */
+    --cor-primaria: #FF0000;
+    --cor-secundaria: #FFFFFF;
+    --cor-selecionado: #146024;
+
+
+    /* Tipografia */
+    --fonte-primaria: "Cinzel", serif;
+    --fonte-secundaria: "Barlow", sans-serif;
+
+}
+
+body {
+    background-image: url(../assets/images/Escolher\ Magia.png);
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
+}
+
+h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: var(--fonte-primaria);
+    color: black;
+    -webkit-text-stroke: 2px var(--cor-primaria);
+    margin-top: 80px;
+    font-size: clamp(20px, 8vw, 64px);
+    gap: 1rem;
+}
+
+h1::after,
+h1::before {
+    content: '';
+    width: clamp(20px, 8vw, 120px);
+    height: 2px;
+    background-color: var(--cor-primaria);
+}
+
+.foto-personagem {
+    width: 100%;
+    height: 100%;
+    background-image: url(../assets/images/personagem2.png);
+    background-size: cover;
+    background-position: center;
+
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+}
+
+.card-personagem {
+    position: relative;
+    border: 1px solid #146024;
+    color: white;
+    width: 249px;
+    height: 414px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+    overflow: hidden;
+}
+
+.card-personagem h2 {
+    font-size: 24px;
+    font-family: var(--fonte-secundaria);
+}
+
+.container-dados-personagem {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 36px;
+}
+
+.container-dados-personagem button {
+    border: 1px solid var(--cor-primaria);
+    width: 174px;
+    height: 32px;
+    font-family: var(--fonte-secundaria);
+    background-color: #000000d7;
+    color: white;
+}
+
+.container-dados-personagem button:hover {
+    border: 1px solid var(--cor-selecionado);
+    transition: ease 0.5s;
+}
+
+.dados-personagem {
+    border: 1px solid #146024;
+    width: 174px;
+    height: 32px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 16px;
+    margin: 0;
+    position: relative;
+    z-index: 2;
+}
+
+
+.dados-personagem div {
+
+    display: flex;
+    justify-content: center;
+
+}
+
+.dados-personagem iconify-icon {
+    display: flex;
+    font-size: 20px;
+}
+
+.ac-hp-damage {
+
+    display: flex;
+    gap: 5px;
+}
+
+.ac-hp-damage p {
+    line-height: 1.8;
+}
+
+main {
+
+    display: flex;
+    gap: 70px;
+    margin-top: 55px;
+}
+
+.sessao-selecionar-magia {
+    border: 1px solid var(--cor-primaria);
+    width: 746px;
+    height: 414px;
+    display: flex;
+    color: white;
+    padding: 33px;
+}
+
+.container-selecionar h2 {
+    font-family: var(--fonte-secundaria);
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.nome-magia-escolhida {
+    color: var(--cor-primaria);
+    font-family: var(--fonte-secundaria);
+    font-size: clamp(20px, 8vw, 32px);
+    margin-top: 42px;
+}
+
+.container-selecionar select {
+    font-family: var(--fonte-secundaria);
+    font-size: 20px;
+    width: 684px;
+    height: 83px;
+    background-color: transparent;
+    border: 1px solid red;
+    color: var(--cor-secundaria);
+    padding-left: 20px;
+    padding-right: 50px;
+
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+.container-select {
+    position: relative;
+}
+
+.container-select::after {
+    content: "\f282";
+    font-family: "bootstrap-icons";
+
+    position: absolute;
+    top: 50%;
+    right: 20px;
+
+    transform: translateY(-50%);
+    pointer-events: none;
+    color: var(--cor-primaria);
+}
+
+.container-selecionar select option {
+    background-color: #000000d7;
+}
+
+
+.descricao-magia p {
+    font-size: clamp(20px, 8vw, 28px);
+}
+
+.botao-proximo {
+    margin-top: 45px;
+    gap: 70px;
+}
+
+.botao-proximo a {
+    border: 1px solid rgb(255, 0, 0);
+    width: clamp(165px, 20vw, 346px);
+    height: clamp(41px, 3vw, 71px);
+    text-decoration: none;
+    background-color: #000000d7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--cor-secundaria);
+    font-size: clamp(16px, 1.5vw, 36px);
+    font-family: var(--fonte-secundaria);
+}
+
+.botao-proximo a:hover {
+    border: 1px solid var(--cor-selecionado);
+    transition: ease 0.5s;
+}
+
+
+/* Responsividade mobile */
+
+
+@media (max-width: 768px) {
+    body {
+        min-height: 100vh;
+    }
+
+    h1 {
+        flex-direction: column;
+        gap: 0;
+        margin-top: 40px;
+    }
+
+    h1::before,
+    h1::after {
+        display: none;
+    }
+
+    main {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        margin-top: 20px;
+    }
+
+    .card-personagem {
+        width: 90vw;
+        height: auto;
+        display: flex;
+        flex-direction: row;
+        background: none;
+        padding: 15px;
+        gap: 20px;
+
+    }
+
+    .foto-personagem {
+        position: static;
+        width: 120px;
+        height: 120px;
+        background-position: center 5%;
+    }
+
+    .conteudo-personagem {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        margin-left: 15px;
+    }
+
+    .container-dados-personagem {
+        margin-bottom: 0;
+    }
+
+    .sessao-selecionar-magia {
+        width: 90vw;
+        height: auto;
+        padding: 20px;
+    }
+
+    .container-selecionar select {
+        width: 100%;
+        position: relative;
+    }
+
+    .container-selecionar select option {
+        width: 20px;
+        font-size: 10px;
+        position: absolute;
+    }
+
+
+    .botao-proximo{
+        margin-top: 18px;
+    }
+
+
+}
+
+/* Responsividade Tablet */
+
+@media (max-width: 1300px) and (min-width: 480px) {
+
+    body {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    h1 {
+        flex-direction: column;
+        gap: 0;
+        margin-top: 40px;
+    }
+
+    h1::before,
+    h1::after {
+        display: none;
+    }
+
+    main {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        margin-top: 20px;
+    }
+
+    .card-personagem {
+        width: 90vw;
+        height: auto;
+        display: flex;
+        flex-direction: row;
+        background: none;
+        padding: 15px;
+        gap: 20px;
+
+    }
+
+    .foto-personagem {
+        position: static;
+        width: 120px;
+        height: 120px;
+        background-position: center 5%;
+    }
+
+    .conteudo-personagem {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        margin-left: 15px;
+    }
+
+    .container-dados-personagem {
+        margin-bottom: 0;
+    }
+
+    .sessao-selecionar-magia {
+        width: 90vw;
+        height: auto;
+        padding: 20px;
+    }
+
+    .container-selecionar select {
+        width: 100%;
+        position: relative;
+    }
+
+    .container-selecionar select option {
+        width: 20px;
+        font-size: 10px;
+        position: absolute;
+    }
+
+
+    .botao-proximo-mobile {
+        margin-top: 40px;
+    }
+
+    .container-dados-personagem {
+        width: 60%;
+    }
+
+    .dados-personagem {
+        width: 100%;
+    }
+
+    .foto-personagem {
+        position: static;
+        width: 40%;
+        height: 120px;
+        background-position: center 15%;
+    }
+
+}

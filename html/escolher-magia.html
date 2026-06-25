@@ -1,11 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Stranger Dungeons</title>
+
+    <script src="https://code.iconify.design/iconify-icon/3.0.0/iconify-icon.min.js"></script>
+
+    <link rel="icon" type="image/x-icon" href="assets/favicon/apple-touch-icon.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="../css/escolher-magia.css">
 </head>
+
 <body>
-    <h1>Escolha uma Magia</h1>
+    <h1>
+        ESCOLHA
+        <span class="quebrar-mobile">UMA MAGIA</span>
+    </h1>
+    <main>
+        <section class="jogador-selecionado ">
+            <article class="card-personagem card-4">
+                <div class="foto-personagem"></div>
+                <div class="container-dados-personagem">
+                    <div class="dados-personagem">
+                        <div class="ac-hp-damage">
+                            <p>HP:</p>
+                            <p>85</p>
+                        </div>
+                        <iconify-icon icon="fa7-solid:shield-heart"></iconify-icon>
+                    </div>
+
+                    <div class="dados-personagem">
+                        <div class="ac-hp-damage">
+                            <P>AC: 15</P>
+                            <P>85</P>
+                        </div>
+
+                        <iconify-icon icon="mdi:progress-star-four-points"></iconify-icon>
+                    </div>
+
+                    <div class="dados-personagem">
+                        <div class="ac-hp-damage">
+                            <P>DAMAGE:</P>
+                            <P>2d6+1</P>
+                        </div>
+                        <iconify-icon icon="ri:sword-fill"></iconify-icon>
+
+                    </div>
+                </div>
+
+            </article>
+        </section>
+
+        <section class="sessao-selecionar-magia">
+            <div class="container-selecionar">
+                <h2>MAGIAS DISPONÍVEIS</h2>
+                <div class="container-select">
+                    <select name="magias" id="magias">
+                        <option value="1">MAGIC MISSILE</option>
+                        <option value="2">MAGIC BLACK SHADOW</option>
+                        <option value="3">MAGIC M SHADOWS</option>
+                        <option value="4">MAGIC SCORY DANGER</option>
+                    </select>
+                </div>
+
+
+                <p class="nome-magia-escolhida">MAGIC MISSILE</p>
+                <div class="descricao-magia">
+                    <p>Três dardos mágicos de força mágica assombram o alvo de sua escolha. O alvo recebe 3d4+3 de dano
+                        de força</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+
+    <section class="botao-proximo">
+        <a href="escolher-monstro.html">CONTINUAR</a>
+    </section>
 </body>
+
 </html>
