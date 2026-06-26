@@ -242,6 +242,7 @@ h1::before {
 
     .botao-proximo {
         margin-top: 25px;
+        margin-bottom: 25px;
     }
 
     .quebrar-mobile {
